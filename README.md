@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # live preview
 
-Go to this link for live preview : 
+Go to this link for live preview : https://aerodex-b7c78.web.app
 
 ## Development server
 Run `npm i` for installing all packages
