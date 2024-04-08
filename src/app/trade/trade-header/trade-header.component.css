@@ -1,0 +1,17 @@
+.tgmenu__action>ul li.login-btn2 a {
+    display: block;
+    border-radius: 5px;
+    padding: 10px 18px;
+    /* border: 1px solid rgba(6, 35, 91, 0.19); */
+    background: var(--tg-theme-primary);
+    font-size: 14px;
+    color: var(--tg-heading-color);
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.tgmenu__action>ul li.login-btn2 a:hover {
+    background: var(--tg-theme-secondary);
+    color: var(--tg-common-color-white);
+    border: 1px solid #fca311;
+}

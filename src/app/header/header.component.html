@@ -1,0 +1,118 @@
+<!-- header-area -->
+<header>
+
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-header__area">
+        <div class="container custom-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tgmenu__wrap">
+                        <nav class="tgmenu__nav">
+                            <div class="logo" style="padding-bottom: 8px;">
+                                <a href="index.html"><img src="assets/img/logo/logo.svg" alt="Logo"></a>
+                            </div>
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                    <li class="active"><a href="index.html">Home</a>
+
+                                    </li>
+                                    <li class=""><a routerLink="/trade">Trade Token</a>
+
+                                    </li>
+                                    <li class=""><a href="#">Features</a>
+
+                                    </li>
+
+                                    <li class=""><a href="#">About Us</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tgmenu__action">
+                                <ul class="list-wrap">
+                                    <!-- <li class="wishlist-icon">
+                                            <a href="shop.html" class="cart-count">
+                                                <img src="assets/img/icons/heart.svg" class="injectable" alt="img">
+                                                <span class="wishlist-count">0</span>
+                                            </a>
+                                        </li> -->
+                                    <li class="mini-cart-icon">
+                                        <img src="assets/img/icons/x.svg" class="injectable" alt="img">
+                                        <!-- <a href="shop.html" class="cart-count">
+                                            <img src="assets/img/icons/cart.svg" class="injectable" alt="img">
+                                            <span class="mini-cart-count"
+                                                style="background-color: var(--tg-theme-primary);color: white;">0</span>
+                                        </a> -->
+                                    </li>
+
+                                    <li class="mini-cart-icon">
+                                        <img src="assets/img/icons/discord.svg" class="injectable" alt="img">
+
+                                    </li>
+                                    <li class="mini-cart-icon">
+                                        <img src="assets/img/icons/github.svg" class="injectable" alt="img">
+
+                                    </li>
+                                    <li *ngIf="!isWalletConnected" class="header-btn login-btn">
+                                        <a id="username" routerLink="/wallet">Connect Wallet</a>
+                                    </li>
+
+                                    <li *ngIf="isWalletConnected" class="header-btn login-btn">
+                                        <a id="username">Wallet Connected</a>
+                                    </li>
+                                    <li *ngIf="isWalletConnected" (click)="disconnect()" style="cursor: pointer;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z" />
+                                        </svg>
+                                        Disconnect
+                                    </li>
+                                    <!-- <li id="logout" class="header-btn login-btn">
+                                        <a href="login.html" onclick="logout()">Log Out</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                        </nav>
+                    </div>
+                    <!-- Mobile Menu  -->
+                    <div class="tgmobile__menu">
+                        <nav class="tgmobile__menu-box">
+                            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+                            <div class="nav-logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.svg" alt="Logo"></a>
+                            </div>
+
+                            <div class="tgmobile__menu-outer">
+                                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                            </div>
+                            <div class="social-links">
+                                <ul class="list-wrap">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="tgmenu__action" style="display: block !important;">
+                                <ul class="list-wrap">
+                                    <li class="header-btn login-btn">
+                                        <a id="username-mobile" href="login.html">Connect Wallet</a>
+                                    </li>
+                                    <!-- <li id="logout-mobile" class="header-btn login-btn">
+                                        <a href="login.html" onclick="logout()">Log Out</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="tgmobile__menu-backdrop"></div>
+                    <!-- End Mobile Menu -->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-area-end -->

@@ -1,0 +1,196 @@
+.transaction-panel {
+    background-color: #16171d;
+    /* flex-grow: 1; */
+    position: relative;
+    /* user-select: auto;
+    display: flex;
+    flex: 1 0 100%;
+    width: 100%; */
+    /* height: 205px; */
+    /* max-height: 511px;
+    min-height: 110px; */
+    /* box-sizing: border-box; */
+    height: 45vh;
+}
+
+.transaction-navbar {
+    width: 100%;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    gap: 20px;
+
+}
+
+.nav-elements {
+    font-family: 'Montserrat';
+    /* font-weight: 600; */
+    border-bottom: 2.2px solid transparent;
+    transition: all ease-in 0.05s;
+    cursor: pointer;
+}
+
+.nav-elements:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+th {
+    font-size: 12px;
+    font-weight: 200;
+    color: #8a8a8a;
+    letter-spacing: 0.4px;
+    background-color: #16171d;
+}
+
+td {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+
+tbody tr {
+    font-family: 'Montserrat';
+    border-top: 5px solid #16171d;
+    border-bottom: 5px solid #16171d;
+    border-left: 3px solid var(--aero-colors-whatsapp-400);
+}
+
+.markprice {
+    color: var(--aero-colors-red-400);
+}
+
+.quantity {
+    color: var(--aero-colors-whatsapp-400);
+}
+
+.unrealized {
+    color: var(--aero-colors-whatsapp-400);
+}
+
+.realized {
+    color: var(--aero-colors-red-400);
+}
+
+.table-sell-btn {
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    background-color: var(--aero-colors-red-400);
+    outline: none;
+    border: none;
+    text-align: center;
+    /* padding: 2px 8px; */
+}
+
+.table-sell-btn:hover {
+    background-color: var(--aero-colors-red-500);
+}
+
+/*=============================
+    00. Preloader
+===============================*/
+
+#preloader1 {
+    background-color: var(--tg-common-color-white);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
+    top: 0px;
+    z-index: 9999;
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+#preloader1 .loader .loader-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 3px solid transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#preloader1 .loader .loader-container::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-top: 3px solid var(--tg-theme-primary);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    animation: loaderspin 1.8s infinite ease-in-out;
+    -webkit-animation: loaderspin 1.8s infinite ease-in-out;
+}
+
+#preloader1 .loader .loader-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80px;
+    text-align: center;
+}
+
+#preloader1 .loader .loader-icon img {
+    animation: loaderpulse alternate 900ms infinite;
+    width: 40px;
+}
+
+@keyframes loaderspin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loaderspin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes loaderpulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}

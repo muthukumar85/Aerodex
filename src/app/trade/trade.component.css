@@ -1,0 +1,101 @@
+.black-background {
+    background-color: #0d1216;
+    font-family: "Space Grotesk";
+    width: 100%;
+    height: 100vh;
+}
+
+.main-chart {
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #16171d;
+    border: 5px solid black;
+    border-left: 4px solid black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #4d4d4d #28282d;
+}
+
+
+
+
+.chart {
+
+
+    height: 60vh;
+    /* Chart occupies 50% of container height initially */
+    /* min-height: 100px; */
+    min-height: 60vh;
+
+    /* Set a minimum height for the chart */
+}
+
+/* .transaction-panel { */
+/* height: 48vh; */
+
+/* overflow-y: auto; */
+/* Transaction panel occupies 50% of container height initially */
+/* min-height: 200px; */
+/* max-height: 50vh; */
+
+/* Set a minimum height for the transaction panel */
+/* } */
+
+.col-3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-2 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-5 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.custom-cxqdau {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    /* position: absolute;
+    top: 50%; */
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 10;
+    justify-content: center;
+}
+
+.custom-1a5cfwy {
+    width: 100% !important;
+    height: 2.4px;
+    border-top-width: 3px;
+    pointer-events: none;
+    background-color: #56565b;
+}
+
+.custom-cxqdau div {
+    border-top-color: var(--aero-colors-blue-800);
+
+}

@@ -1,0 +1,43 @@
+<div style="background-color: black;" class="fix black-background">
+    <div class="row">
+
+        <app-trade-header></app-trade-header>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <app-tokenomics></app-tokenomics>
+        </div>
+        <div #main class="col-6 main-chart">
+
+            <div #chart class="chart"><app-chart></app-chart></div>
+
+
+            <div #resizer style="user-select:none;width:100%;cursor:row-resize;" class="chakra-stack custom-cxqdau">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" focusable="false"
+                    class="chakra-icon custom-wvy4ls" height="0.6em" width="0.6em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+                    </path>
+                </svg>
+                <div class="custom-1a5cfwy"></div>
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" focusable="false"
+                    class="chakra-icon custom-wvy4ls" height="0.6em" width="0.6em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z">
+                    </path>
+                </svg>
+            </div>
+            <div class="transaction-panel" #transactionpanel>
+
+                <app-transaction-panel style="background-color: #16171d"></app-transaction-panel>
+            </div>
+        </div>
+
+        <div class="col-3" style="height: 100vh;background-color: #16171d;margin-top: 5px;">
+            <app-trade-panel></app-trade-panel>
+        </div>
+    </div>
+
+
+</div>

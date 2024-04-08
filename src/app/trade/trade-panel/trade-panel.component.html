@@ -1,0 +1,266 @@
+<div class="trade-panel">
+    <!--Preloader-->
+    <div #spinner id="preloader1" style="position: absolute;top: 0;left: 0;">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+                <div class="loader-icon"><img src="assets/img/logo/preloader.svg" alt="Preloader"></div>
+            </div>
+        </div>
+    </div>
+    <!--Preloader-end -->
+    <div class="row search-pane">
+        <div class="col-6">
+            <input #tokenaddress type="text" placeholder="Paste Address" class="search-bar">
+        </div>
+        <div class="col-2">
+            <button (click)="onTokenSearch()" type="button" class="search-btn">OPEN</button>
+        </div>
+        <div class="col-2">
+            <button class="slippage">
+                <span><svg class="slipsvg" width="12" height="12" viewBox="0 0 12 12" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10794_148239)">
+                            <path
+                                d="M10.7997 7.8H10.7156C10.4516 6.768 9.51561 6 8.39961 6C7.28361 6 6.34757 6.768 6.08361 7.8H1.19961C0.863609 7.8 0.599609 8.064 0.599609 8.4C0.599609 8.736 0.863609 9 1.19961 9H6.08361C6.34761 10.032 7.28361 10.8 8.39961 10.8C9.51561 10.8 10.4517 10.032 10.7156 9H10.7997C11.1357 9 11.3997 8.736 11.3997 8.4C11.3997 8.064 11.1357 7.8 10.7997 7.8ZM8.39965 9.6C7.73963 9.6 7.19965 9.06002 7.19965 8.4C7.19965 7.73998 7.73963 7.2 8.39965 7.2C9.05967 7.2 9.59965 7.73998 9.59965 8.4C9.59965 9.06002 9.05967 9.6 8.39965 9.6Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M1.19961 4.19995H1.28365C1.54765 5.23195 2.48365 5.99995 3.59965 5.99995C4.71565 5.99995 5.65169 5.23195 5.91565 4.19995H10.7997C11.1357 4.19995 11.3997 3.93595 11.3997 3.59995C11.3997 3.26395 11.1357 2.99995 10.7997 2.99995H5.91565C5.65165 1.96795 4.71565 1.19995 3.59965 1.19995C2.48365 1.19995 1.54761 1.96795 1.28365 2.99995H1.19961C0.863609 2.99995 0.599609 3.26395 0.599609 3.59995C0.599609 3.93595 0.863609 4.19995 1.19961 4.19995ZM3.59961 2.39995C4.25963 2.39995 4.79961 2.93993 4.79961 3.59995C4.79961 4.25997 4.25963 4.79995 3.59961 4.79995C2.93959 4.79995 2.39961 4.25997 2.39961 3.59995C2.39961 2.93993 2.93959 2.39995 3.59961 2.39995Z"
+                                fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_10794_148239">
+                                <rect width="12" height="12" fill="currentColor"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg></span>
+                <span class="sliptext">auto%</span>
+            </button>
+        </div>
+        <!-- <div class="col-2">
+            <span class="setting"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                    focusable="false" height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M256 176a80 80 0 1080 80 80.24 80.24 0 00-80-80zm172.72 80a165.53 165.53 0 01-1.64 22.34l48.69 38.12a11.59 11.59 0 012.63 14.78l-46.06 79.52a11.64 11.64 0 01-14.14 4.93l-57.25-23a176.56 176.56 0 01-38.82 22.67l-8.56 60.78a11.93 11.93 0 01-11.51 9.86h-92.12a12 12 0 01-11.51-9.53l-8.56-60.78A169.3 169.3 0 01151.05 393L93.8 416a11.64 11.64 0 01-14.14-4.92L33.6 331.57a11.59 11.59 0 012.63-14.78l48.69-38.12A174.58 174.58 0 0183.28 256a165.53 165.53 0 011.64-22.34l-48.69-38.12a11.59 11.59 0 01-2.63-14.78l46.06-79.52a11.64 11.64 0 0114.14-4.93l57.25 23a176.56 176.56 0 0138.82-22.67l8.56-60.78A11.93 11.93 0 01209.94 26h92.12a12 12 0 0111.51 9.53l8.56 60.78A169.3 169.3 0 01361 119l57.2-23a11.64 11.64 0 0114.14 4.92l46.06 79.52a11.59 11.59 0 01-2.63 14.78l-48.69 38.12a174.58 174.58 0 011.64 22.66z">
+                    </path>
+                </svg>
+            </span>
+        </div> -->
+    </div>
+    <div class="row">
+        <div class="col-4 buy-btn">
+            <div class="">
+
+                <button #buybutton type="button" id="buy" (click)="buyclick()" class="buy-inactive">Buy</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="sell-btn">
+
+                <button #sellbutton type="button" id="sell" (click)="sellclick()" class="sell-inactive">Sell</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="snipe-btn">
+                <button #snipebutton type="button" id="snipe" (click)="snipeclick()"
+                    class="snipe-inactive">Snipe</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- Buy Panel -->
+    <div #buypanel class="buy-panel" style="display: none;">
+
+        <h2><img [src]="imageURL" width="35px" height="35px" alt="" style="border-radius: 50%;">
+            {{tokenmetadata.symbol}}
+            <img [cdkCopyToClipboard]="tokenAddress" (cdkCopyToClipboardCopied)="onClipboardCopy($event)"
+                style="cursor: pointer;" src="assets/img/icons/copy.svg"> /SOL
+        </h2>
+        <div class="price-impact">
+            <div class="label">Price Impact</div>
+            <div class="value">{{PRICE_IMPACT}}</div>
+        </div>
+        <div class="price-impact">
+            <div class="label">Swap Through</div>
+            <div *ngIf="isRouteFound" class="value">Raydium Pool</div>
+            <div *ngIf="!isRouteFound" class="value">No Route</div>
+        </div>
+        <div class="price-impact">
+            <div class="label">Swap Fee</div>
+            <div class="value">0.75%</div>
+        </div>
+        <div class="buy-row">
+            <button (click)="buy(0.5)" [disabled]="disableBuyOption">Buy 0.5 WSOL</button>
+            <button (click)="buy(2.5)" [disabled]="disableBuyOption">Buy 2.5 WSOL</button>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="amount-bar-outer">
+                    <input type="number" placeholder="Enter Sol to Buy" class="amount-bar"
+                        (keyup)="onPriceEnterinSol($event)" [disabled]="disableBuyOption">
+                </div>
+            </div>
+        </div>
+        <div class="dollar-view">
+            <div class="col-12">
+                <p>${{CALCULATED_USD_PRICE}}</p>
+            </div>
+        </div>
+        <div class="buy-row" style="padding-top: 0px;">
+            <button [disabled]="disableBuyOption" (click)="buyinput()">Buy Now</button>
+        </div>
+    </div>
+    <!-- Sell Panel -->
+    <div #sellpanel class="sell-panel" style="display: none;">
+
+        <h2><img [src]="imageURL" width="35px" height="35px" alt="" style="border-radius: 50%;">
+            {{tokenmetadata.symbol}}
+            <img [cdkCopyToClipboard]="tokenAddress" (cdkCopyToClipboardCopied)="onClipboardCopy($event)"
+                style="cursor: pointer;" src="assets/img/icons/copy.svg"> /SOL
+        </h2>
+        <div class="price-impact">
+            <div class="label">Price Impact</div>
+            <div class="value">{{PRICE_IMPACT}}</div>
+        </div>
+        <div class="price-impact">
+            <div class="label">Swap Through</div>
+            <div *ngIf="isRouteFound" class="value">Raydium Pool</div>
+            <div *ngIf="!isRouteFound" class="value">No Route</div>
+        </div>
+        <div class="price-impact">
+            <div class="label">Swap Fee</div>
+            <div class="value">0.75% SOL</div>
+        </div>
+        <!-- <div class="price-impact">
+            <div class="label">Profit</div>
+            <div class="value">94321% ( 0.01 SOL )</div>
+        </div> -->
+        <div class="sell-row">
+            <button (click)="sell(25)" [disabled]="disableBuyOption">Sell 25%</button>
+            <button (click)="sell(100)" [disabled]="disableBuyOption">Sell 100%</button>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="amount-bar-outer">
+                    <input type="number" placeholder="Enter Percentage to Sell" class="amount-bar"
+                        (keyup)="onPercentageEnterinSol($event)" [disabled]="disableBuyOption">
+                </div>
+            </div>
+        </div>
+
+        <div class="sell-row" style="padding-top: 0px;">
+            <button (click)="sellinput()">Sell Now</button>
+        </div>
+    </div>
+    <!-- Snipe Panel -->
+    <div #snipepanel class="snipe-panel" style="display: none;">
+
+        <h2><img [src]="imageURL" width="35px" height="35px" alt="" style="border-radius: 50%;">
+            {{tokenmetadata.symbol}}
+            <img [cdkCopyToClipboard]="tokenAddress" (cdkCopyToClipboardCopied)="onClipboardCopy($event)"
+                style="cursor: pointer;" src="assets/img/icons/copy.svg"> /SOL
+        </h2>
+        <div class="price-impact">
+            <div class="label">Price Impact</div>
+            <div class="value">UnPredictable</div>
+        </div>
+        <div class="price-impact">
+            <div class="label">Swap Through</div>
+            <div class="value">Raydium Pool</div>
+        </div>
+        <div class="price-impact">
+            <div class="label">Swap Fee</div>
+            <div class="value">1%</div>
+        </div>
+        <!-- <div class="price-impact">
+            <div class="label">CountDown</div>
+            <div class="value">00:00:56</div>
+        </div> -->
+        <div class="snipe-row">
+            <button [disabled]="disableSnipeOption" (click)="snipe(0.5)">Snipe 0.5 SOL</button>
+            <button [disabled]="disableSnipeOption" (click)="snipe(2.5)">Snipe 2.5 SOL</button>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="amount-bar-outer">
+                    <input type="number" placeholder="Enter Sol to Snipe" class="amount-bar"
+                        (keyup)="onSnipePriceEnterinSol($event)" [disabled]="disableSnipeOption">
+                </div>
+            </div>
+        </div>
+        <div class="dollar-view">
+            <div class="col-3">
+                <p>${{SNIPE_CALCULATED_USD_PRICE}}</p>
+            </div>
+        </div>
+        <div class="snipe-row" style="padding-top: 0px;">
+            <button [disabled]="disableSnipeOption" (click)="snipeinput()">Snipe Now</button>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div>
+        <h2 style="font-size: 18px;
+        color: #fffefb;
+        font-weight: 500;
+        font-family: 'Space Grotesk';
+        text-align: center;">Wrap SOL</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="amount-bar-outer">
+                    <input #wrapsol type="number" placeholder="Enter Sol to Wrap" class="amount-bar">
+                </div>
+            </div>
+
+        </div>
+        <div class="wrap-row" style="padding: 5px 20px;">
+            <button (click)="wrapsolana(wrapsol.value)">Wrap SOL</button>
+        </div>
+
+    </div>
+    <!-- <div class="pnl">
+        <div class="pnl-data row">
+            <div class="label col-3">Bought :</div>
+            <div class="value-buy col-3">$0</div>
+            <div class="amount col-3">166.7K</div>
+            <div class="transactions col-3">4 txns</div>
+        </div>
+        <div class="pnl-data row">
+            <div class="label col-3">Sold :</div>
+            <div class="value-sell col-3">$845.4K</div>
+            <div class="amount col-3">166.7K</div>
+            <div class="transactions col-3">4940 txns</div>
+        </div>
+        <div class="pnl-data row">
+            <div class="label col-3">P&L :</div>
+            <div class="value-pnl col-3" style="color: var(--aero-colors-whatsapp-400);">$2K</div>
+            <div class="amount col-3" style="visibility: hidden;">166.7K</div>
+            <div class="transactions col-3" style="visibility: hidden;">4 txns</div>
+        </div>
+        <div class="pnl-data row">
+            <div class="label col-3" style="padding: 0px 0px;text-align: left;font-size: 13px;">Unrealized :</div>
+            <div class="value-unreal col-3" style="padding: 0px 0px;font-size: 14px;">- </div>
+            <span class="col-6" style="color: rgba(255, 255, 255, 0.9);font-size: 14px;padding: 0px 0px;">234.2K of
+                166.7K</span>
+
+        </div>
+        <div #toast id="toast">
+            <div id="img"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
+                    viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                    <path opacity="0.2" fill="white"
+                        d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+              s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+              c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+                    <path fill="white" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+              C22.32,8.481,24.301,9.057,26.013,10.047z">
+                        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20"
+                            to="360 20 20" dur="0.5s" repeatCount="indefinite" />
+                    </path>
+                </svg></div>
+            <div id="desc">A notification message..</div>
+        </div>
+        <div style="padding-bottom: 100px;"></div>
+    </div> -->
+</div>

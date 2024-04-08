@@ -1,0 +1,1 @@
+export const RUGCHECK_API: string = 'https://api.rugcheck.xyz/v1/tokens/';

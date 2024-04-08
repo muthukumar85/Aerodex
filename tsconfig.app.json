@@ -3,12 +3,21 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "strictPropertyInitialization": false,
+    "noImplicitReturns": false,
   },
   "files": [
-    "src/main.ts"
+    "src/main.ts",
+    "src/polyfills.ts",
+    "src/extra-webpack.config.js"
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
 }

@@ -1,0 +1,338 @@
+<!--Preloader-->
+<div id="preloader">
+    <div id="loader" class="loader">
+        <div class="loader-container">
+            <div class="loader-icon"><img src="assets/img/logo/preloader.svg" alt="Preloader"></div>
+        </div>
+    </div>
+</div>
+<!--Preloader-end -->
+
+<!-- Scroll-top -->
+<button class="scroll__top scroll-to-target" data-target="html">
+    <i class="tg-flaticon-arrowhead-up"></i>
+</button>
+<!-- Scroll-top-end-->
+
+
+<app-header></app-header>
+
+
+
+<!-- main-area -->
+<main class="main-area fix">
+
+    <!-- banner-area -->
+    <section class="banner-area banner-bg tg-motion-effects" data-background="assets/img/banner/banner_bg1.png">
+        <div class="container">
+            <div class="row justify-content-between align-items-start">
+                <div class=" col-lg-6">
+                    <div class="banner__content" style="text-align: center;">
+                        <h3 class="title tg-svg main-title" data-aos="fade-right" data-aos-delay="400">
+                            <!-- <p data-aos="fade-right" data-aos-delay="600" style="text-align: center;">TREAT YOUR
+                                SKIN</p> -->
+
+
+                            Light Speed <br>
+                            Sniping and Trading <br> Environment in Solana
+                        </h3>
+                        <p data-aos="fade-right" data-aos-delay="600">Make
+                            your Profit even
+                            more bigger <br>
+
+                            <a data-aos="fade-right" data-aos-delay="800" style="margin-top: 4%;" (click)="RouteTrade()"
+                                class="btn arrow-btn">Trade Now
+                                <img src="assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+
+                        </p>
+
+                        <!-- <div class="banner__btn" data-aos="fade-right" data-aos-delay="800"
+                            style="text-align: center;">
+                        </div> -->
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="banner__images">
+
+                        <img src="assets/img/banner/11.svg" alt="img" class="main-img" data-aos="zoom-in-down"
+                            data-aos-delay="200">
+
+                        <div class="banner__author alltuchtopdown" data-aos="fade-right" data-aos-delay="300">
+
+                            <img src="assets/img/objects/sol.svg" alt="shape" class="arrow-shape tg-motion-effects3">
+                        </div>
+                        <div class="about__enrolled" data-aos="fade-right" data-aos-delay="200">
+
+                            <img width="85px" src="assets/img/objects/usdt.svg" alt="img">
+                        </div>
+                        <div class="banner__student" data-aos="fade-left" data-aos-delay="400">
+
+                            <img width="80px" src="assets/img/objects/usdc.svg" alt="img" class="injectable">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- banner-area-end -->
+
+    <!-- features-area -->
+    <!-- <section class="features__area-two section-pt-90 section-pb-60">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="section__title text-center mb-40">
+                       <h2 class="title" style="font-family: 'Montserrat';font-weight: 500;">Catch the
+                            Next 100x Token</h2>
+                        </div>
+                </div>
+            </div>
+            <div class="features__item-wrap">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12">
+                        <div class="features__item-two">
+                            <h2 class="title heading" style="font-family: 'Montserrat';font-weight: 500;">Top Gainers
+                            </h2><br>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="head__table">Token</p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="head__table">Price</p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="head__table">24H</p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="head__table">Trade</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="data__table"><img src="assets/img/icons/btc.png" alt="token">BTC</p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="data__table">$0.000024</p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+                                    <p class="data__table change">+20020%</p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-3">
+
+                                    <button class="trade-btn">
+                                        <a>Trade</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+                        <div class="features__item-two">
+                            <h2 class="title heading" style="font-family: 'Montserrat';font-weight: 500;">New Listing
+                            </h2><br>
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5">
+                                    <p class="head__table">Token</p>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5">
+                                    <p class="head__table">Price</p>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2">
+                                    <p class="head__table">Age</p>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5">
+                                    <p class="data__table"><img src="assets/img/icons/btc.png" alt="token">BTC</p>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5">
+                                    <p class="data__table">$0.000024</p>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2">
+                                    <p class="data__table">5m</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- features-area-end -->
+
+
+    <!-- about-area -->
+    <section class="about-area tg-motion-effects ">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="about__images">
+                        <img src="assets/img/banner/laptop.svg" alt="img" class="main-img">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__content">
+                        <div class="section__title">
+                            <span class="sub-title" style="font-family: 'Montserrat';">Trusted Trading Machine</span>
+                            <h2 class="title" style="font-family: 'Montserrat';font-weight: 500;">
+                                Snipe with Speed
+                            </h2>
+                        </div>
+                        <p class="desc" style="font-family: 'Montserrat';font-size: 18px;">Powerful sniping machine to
+                            make big bucks in
+                            solana</p>
+                        <ul class="about__info-list list-wrap">
+                            <li class="about__info-list-item">
+                                <i class="flaticon-angle-right"></i>
+                                <p class="content" style="font-family: 'Montserrat';">Be First in the Token Market</p>
+                            </li>
+                            <li class="about__info-list-item">
+                                <i class="flaticon-angle-right"></i>
+                                <p class="content" style="font-family: 'Montserrat';">Access All Information in one
+                                    place</p>
+                            </li>
+                            <!-- <li class="about__info-list-item">
+                                <i class="flaticon-angle-right"></i>
+                                <p class="content">Flexible Course Plan</p>
+                            </li> -->
+                        </ul>
+                        <div class="tg-button-wrap">
+                            <a href="#" class="btn arrow-btn">Snipe Now <img src="assets/img/icons/right_arrow.svg"
+                                    alt="img" class="injectable"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about-area-end -->
+
+
+</main>
+<!-- main-area-end -->
+
+
+
+<!-- footer-area -->
+<!-- <footer class="footer__area">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer__widget">
+                        <div class="logo mb-35">
+                            <a href="index.html"><img src="assets/img/logo/secondary_logo.svg" alt="img"></a>
+                        </div>
+                        <div class="footer__content">
+                            <p>when an unknown printer took galley of type and scrambled it to make pspecimen bookt has.
+                            </p>
+                            <ul class="list-wrap">
+                                <li>463 7th Ave, NY 10018, USA</li>
+                                <li>+123 88 9900 456</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h4 class="footer__widget-title">Useful Links</h4>
+                        <div class="footer__link">
+                            <ul class="list-wrap">
+                                <li><a href="events-details.html">Our values</a></li>
+                                <li><a href="events-details.html">Our advisory board</a></li>
+                                <li><a href="events-details.html">Our partners</a></li>
+                                <li><a href="events-details.html">Become a partner</a></li>
+                                <li><a href="events-details.html">Work at Future Learn</a></li>
+                                <li><a href="events-details.html">Quizlet Plus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h4 class="footer__widget-title">Our Company</h4>
+                        <div class="footer__link">
+                            <ul class="list-wrap">
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="instructor-details.html">Become Teacher</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="instructor-details.html">Instructor</a></li>
+                                <li><a href="events-details.html">Events</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer__widget">
+                        <h4 class="footer__widget-title">Get In Touch</h4>
+                        <div class="footer__contact-content">
+                            <p>when an unknown printer took <br> galley type and scrambled</p>
+                            <ul class="list-wrap footer__social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="assets/img/icons/facebook.svg" alt="img" class="injectable">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="assets/img/icons/twitter.svg" alt="img" class="injectable">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="assets/img/icons/whatsapp.svg" alt="img" class="injectable">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="assets/img/icons/instagram.svg" alt="img" class="injectable">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="assets/img/icons/youtube.svg" alt="img" class="injectable">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="app-download">
+                            <a href="#"><img src="assets/img/others/google-play.svg" alt="img"></a>
+                            <a href="#"><img src="assets/img/others/apple-store.svg" alt="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="copy-right-text">
+                        <p>© 2010-2024 skillgro.com. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="footer__bottom-menu">
+                        <ul class="list-wrap">
+                            <li><a href="contact.html">Term of Use</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> -->
+<!-- footer-area-end -->

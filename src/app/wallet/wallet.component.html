@@ -1,0 +1,42 @@
+<div class="black-background" style="padding-top: 20vh;">
+    <div class="main" style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+
+        <div class="row">
+            <div class="col-12">
+                <img src="assets/img/logo/logo-white.svg" alt="" width="450">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 style="font-size: 22px;color: white;font-weight: 300;">Connect Wallet to Aerodex</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="amount-bar-outer">
+                    <input style="width: 350px;" type="text" placeholder="Enter Private Key" class="amount-bar"
+                        #keyinput>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+
+                <div class="header-btn login-btn2" (click)="onSubmit(keyinput.value)">
+                    <a id="wallet">Connect Wallet</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+                <p>Important Note : Don't use your main wallet<br>Alternatively create a new wallet in phantom then
+                    export and
+                    paste the private key<br><br>Finally credit your new wallet with WSOL to enjoy light speed trading
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

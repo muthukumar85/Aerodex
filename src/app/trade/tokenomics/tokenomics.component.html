@@ -1,0 +1,316 @@
+<section class="tokenomics-section">
+    <!--Preloader-->
+    <div #spinner id="preloader1" style="position: absolute;top: 0;left: 0;">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+                <div class="loader-icon"><img src="assets/img/logo/preloader.svg" alt="Preloader"></div>
+            </div>
+        </div>
+    </div>
+    <!--Preloader-end -->
+    <h2>{{TOKEN_NAME}} <img [cdkCopyToClipboard]="MetadataAddress" (cdkCopyToClipboardCopied)="onClipboardCopy($event)"
+            style="cursor: pointer;" src="assets/img/icons/copy.svg"> /SOL</h2>
+    <div class="tokenomics-sub">
+        <div class=" socials">
+            <div class="child-social" (click)="webclick()">
+                <img src="assets/img/icons/web.svg" alt=""> Website
+            </div>
+            <div class="child-social" (click)="twiclick()">
+                <img src="assets/img/icons/twitter_small.svg" alt=""> Twitter
+            </div>
+            <div class="child-social" (click)="telclick()">
+                <img src="assets/img/icons/telegram.svg" alt=""> Telegram
+            </div>
+        </div>
+        <!-- <div class=" socials">
+    
+        </div>
+        <div class=" socials">
+    
+        </div> -->
+        <div class="row price-row">
+            <div class="col-6 ">
+                <div class="card price">
+
+                    <p class="card-title">PRICE USD</p>
+                    <h3 class="card-text" #priceinusd>$-</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">PRICE</p>
+                    <h3 class="card-text" #priceinsol>- SOL</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row price-row">
+
+            <!-- <div class="col-6">
+                <div class="card price">
+                    <p class="card-title" data-title="Fully Diluted Market Cap">LIQUIDITY</p>
+                    <h3 class="card-text">$-</h3>
+                </div>
+            </div> -->
+            <div class="col-12">
+                <div class="card price">
+                    <p class="card-title" data-title="Market Cap of Token">MCAP</p>
+                    <h3 class="card-text" #marketcap>$-</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px;margin-bottom: 10px;display: flex;align-items: baseline;">
+
+            <h2 class="col-8 ">SECURITY SCORE</h2>
+            <div class=" col-4">
+                <div data-title="Security Score">
+                    <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle #circle cx="25" cy="25" r="22.5"
+                            [ngClass]="{'low': 'red', 'mid':'orange','high':'green'}[state]" stroke="red"
+                            stroke-width="5" />
+                        <text x="12" y="32" font-family="Space Grotesk" font-size="20"
+                            [style.fill]="'white'">{{securityScore}}</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="row price-row">
+            <div class="col-6">
+                <div class="card price">
+
+                    <p class="card-title">LIQUIDITY</p>
+                    <h3 *ngIf="liquidityStatus" class="card-text" data-title="Liquidity Locked ✔"
+                        style="display: flex;justify-content: center;align-items: center;">
+                        <span>
+                            {{LiquidityPercentage}}
+                        </span> <img src="assets/img/icons/lock.svg" alt="" srcset="">
+                    </h3>
+                    <h3 *ngIf="!liquidityStatus" class="card-text" data-title="Liquidity Not Locked ✘"
+                        style="display: flex;justify-content: center;align-items: center;">
+                        <span>
+                            {{LiquidityPercentage}}
+                        </span> <img src="assets/img/icons/unlock.svg" alt="" srcset="">
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card price">
+
+                    <p class="card-title">
+                        MUTABLE INFO</p>
+                    <h3 *ngIf="is_Mintable" class="card-text"
+                        data-title="The token information such as name, logo, website address can be changed by the owner."
+                        style="color: var(--aero-colors-red-450);display: flex;justify-content: center;align-items: center;">
+                        Yes ✘</h3>
+                    <h3 *ngIf="!is_Mintable" class="card-text"
+                        data-title="The token information such as name, logo, website address cannot be changed by the owner."
+                        style="color: var(--aero-colors-whatsapp-300);display: flex;justify-content: center;align-items: center;">
+                        No ✔</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="row price-row">
+            <div class="col-6">
+                <div class="card price">
+
+                    <p class="card-title" data-title="Mint function enables contract owner to 
+                        issue more tokens and cause the coin price to plummet.
+                        It is extremely risky.">
+                        MINTABLE</p>
+                    <h3 *ngIf="is_Mutable" class="card-text"
+                        style="color: var(--aero-colors-red-450);display: flex;justify-content: center;align-items: center;">
+                        Yes ✘</h3>
+                    <h3 *ngIf="!is_Mutable" class="card-text"
+                        style="color: var(--aero-colors-whatsapp-300);display: flex;justify-content: center;align-items: center;">
+                        No ✔</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card price">
+
+                    <p class="card-title"
+                        data-title="If token ownership is renounced, no one can execute functions such as mint more tokens.">
+                        FREEZABLE</p>
+                    <h3 *ngIf="is_Freezable" class="card-text"
+                        style="color: var(--aero-colors-red-450);display: flex;justify-content: center;align-items: center;">
+                        Yes ✘</h3>
+                    <h3 *ngIf="!is_Freezable" class="card-text"
+                        style="color: var(--aero-colors-whatsapp-300);display: flex;justify-content: center;align-items: center;">
+                        No ✔</h3>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row price-row">
+
+
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">CREATOR BALANCE</p>
+                    <h3 #creatorbalance class="card-text" style="color: #fca311;">{{CREATOR_BALANCE}}</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">TOP 10 HOLDERS</p>
+                    <h3 #top10 class="card-text" style="color:var(--aero-colors-red-450);">{{TOP10HOLDERS}}</h3>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row" style="margin-top: 10px;margin-bottom: 10px;display: flex;align-items: baseline;">
+
+            <h2 class="col-12 ">SAFETY CHECK</h2>
+
+
+        </div>
+        <div class="row price-row">
+
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">5M</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-red-450);">-47.4%</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">1H</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-whatsapp-300);">38.4%</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="row price-row">
+
+
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">6H</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-whatsapp-300);">18.4%</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card price">
+                    <p class="card-title">24H</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-whatsapp-300);">282%</h3>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="row price-row">
+
+
+            <div class="col-12">
+                <div class="card price">
+                    <p class="card-title">VOLUME</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-whatsapp-300);">$323K</h3>
+                    <div class="row" style="display: flex;justify-content: space-between;">
+                        <p class="card-title col-6" style="margin: 0px 0px;">BUY VOL</p>
+                        <p class="card-title col-6" style="margin: 0px 0px;">SELL VOL</p>
+                    </div>
+                    <div class="row">
+                        <h3 class="card-text col-6" style="color: var(--aero-colors-whatsapp-300);">
+                            60%</h3>
+                        <h3 class="card-text col-6" style="color: var(--aero-colors-red-450);">40%</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="display: flex;flex-direction: row;">
+                            <div class="buy-progress" style="width: 90%;"></div>
+                            <div class="sell-progress" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row price-row">
+
+
+            <div class="col-12">
+                <div class="card price">
+                    <p class="card-title">TXNS</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-whatsapp-300);">345</h3>
+                    <div class="row" style="display: flex;justify-content: space-between;">
+                        <p class="card-title col-6" style="margin: 0px 0px;">BUYS</p>
+                        <p class="card-title col-6" style="margin: 0px 0px;">SELLS</p>
+                    </div>
+                    <div class="row">
+                        <h3 class="card-text col-6" style="color: var(--aero-colors-whatsapp-300);">
+                            832</h3>
+                        <h3 class="card-text col-6" style="color: var(--aero-colors-red-450);">498</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="display: flex;flex-direction: row;">
+                            <div class="buy-progress" style="width: 60%;"></div>
+                            <div class="sell-progress" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row price-row">
+
+
+            <div class="col-12">
+                <div class="card price">
+                    <p class="card-title">TRADERS</p>
+                    <h3 class="card-text" style="color: var(--aero-colors-whatsapp-300);">345</h3>
+                    <div class="row" style="display: flex;justify-content: space-between;">
+                        <p class="card-title col-6" style="margin: 0px 0px;">BUYERS</p>
+                        <p class="card-title col-6" style="margin: 0px 0px;">SELLERS</p>
+                    </div>
+                    <div class="row">
+                        <h3 class="card-text col-6" style="color: var(--aero-colors-whatsapp-300);">
+                            832</h3>
+                        <h3 class="card-text col-6" style="color: var(--aero-colors-red-450);">498</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="display: flex;flex-direction: row;">
+                            <div class="buy-progress" style="width: 60%;"></div>
+                            <div class="sell-progress" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+        <div class="row" style="margin-top: 10px;margin-bottom: 10px;display: flex;align-items: baseline;">
+
+            <h2 class="col-12">TOP 10 HOLDERS</h2>
+
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h2 style="font-size: 16px;">Top</h2>
+            </div>
+            <div class="col-6">
+                <h2 style="text-align: left;font-size: 16px;">ADDRESS</h2>
+            </div>
+            <div class="col-4">
+                <h2 style="font-size: 16px;">%</h2>
+            </div>
+        </div>
+        <div *ngFor="let data of top10_holders;" class="row" style="margin-top: 5px;margin-bottom: 5px;">
+            <div class="col-2">
+                <h3 style="font-size: 15px;">{{data.index}}</h3>
+            </div>
+            <div class="col-6">
+                <h3 style="text-align: left;font-size: 14px;"><img [cdkCopyToClipboard]="data.address"
+                        (cdkCopyToClipboardCopied)="onClipboardCopy($event)" style="cursor: pointer;"
+                        src="assets/img/icons/clip.svg" alt="" srcset="">
+                    {{data.mod_add}}
+                </h3>
+            </div>
+            <div class="col-4">
+                <h3 style="font-size: 15px;" [ngStyle]="{'color':data.color}">{{data.percentage}}</h3>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
