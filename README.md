@@ -4,6 +4,22 @@ Aerodex is a light speed trading and snipng environment for spl tokens
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
+# Project Info
+
+Aerodex is trading based web for spl token in solana blockchain
+unlike AMM UI , Aerodex UI is more understandable and easy to use
+you don't need to stress about rugpull anymore
+
+Aerodex has security checks of token , price chart and trading panel at one place
+so traders don't need to go through multiple bots to check security and execute trades
+
+Aerodex may be little bit slow because of solana congestion and low end server ( firebase hosting service that is not for high end usage . i used for live preview for solana renaissance hackathon)
+
+# Important note
+
+Aerodex doesn't use any third party api's to fetch security details
+Aerodex directly get information from raydium program using raydium sdk and solana sdk
+
 # live preview
 
 Go to this link for live preview : https://aerodex-b7c78.web.app
